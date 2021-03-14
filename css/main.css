@@ -1,0 +1,39 @@
+/* reset */
+* {font-family:'Roboto', sans-serif;font-weight:400;letter-spacing:0;color:#000;outline:none;}
+body {position:relative;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+img {width:100%;border:none;display:block;}
+html,body,ul,ol,p,h1,h2,h3,h4,h5 {margin:0;padding:0;}
+strong {font-weight:700;color:inherit;}
+a {text-decoration: none;outline:none;font-size:inherit;color:inherit;}
+ul li, ol li {list-style:none;vertical-align: middle}
+textarea {resize:none;}
+select {-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+select::-ms-expand {display:none;}
+form * {border:0;outline:0;margin:0;padding:0;}
+input,button,textarea {border-radius:0;-webkit-appearance:none;box-shadow:none;}
+svg {overflow:hidden;width:100%;height:100%;}
+table {border-collapse:collapse;}
+button {border:none;}
+
+/* header */
+header {position: fixed; z-index: 500; width: 100%; left: 0; top: 0; background: #fff; border-bottom: 1px solid #e8e8e8;}
+header .wrap-header {display: flex; max-width: 1200px; margin: 0 auto; padding: 15px 20px; justify-content: space-between; align-items: center; transition: 0.3s ease;}
+header .logo {width: 30px; transition: 0.2s ease;}
+header .profile {width: 26px; border-radius: 100%; overflow: hidden; border: 1px solid #c7c7c7;}
+header nav ul li {display: inline-block; vertical-align: top; margin: 0 20px; font-size: 14px; color: #777;}
+header nav ul li.on {font-weight: 600; color: #444;}
+header .btn-menu {display: none;}
+
+@media (max-width: 768px) {
+    header .wrap-header {position: relative; padding: 10px 20px;}
+    header .logo {width: 22px;}
+    header .profile {display: none;}
+    header nav {display: none; position: absolute; width: 100%; left: 0; top: 43px; background: #f7f7f7; padding: 20px; box-sizing: border-box;}
+    header nav.active {display: block;}
+    header nav ul li {display: block; text-align: center; margin: 0 0 16px 0;}
+    header nav ul li:last-child {margin: 0;}
+    header .btn-menu {display: block; position: relative; width: 26px; height: 10px; cursor: pointer;}
+    header .btn-menu::before, header .btn-menu::after {content: ''; position: absolute; width: 100%; height: 2px; background: #000;}
+    header .btn-menu::before {top: 0; left: 0;}
+    header .btn-menu::after {bottom: 0; left: 0;}
+}
